@@ -26,9 +26,9 @@ router.post("/login", asyncHandler(
         // recibe por el body el json del email y password
         const { email, password } = req.body;
         // const user = sample_users.find(user => user.email == email && user.password == password);
-        const user = await UserModel.findOne({ email, password });
+        const user = await UserModel.findOne({ email });
 
-        if (user) {
+        if (user && await bcrypt.compare(password, user.password)) {
             res.send(generateTokenResponse(user));
         }
         else res.status(HTTP_BAD_REQUEST).send("Correo o constraseña inválidos")
