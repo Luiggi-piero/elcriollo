@@ -28,6 +28,10 @@ router.post("/login", asyncHandler(
         // const user = sample_users.find(user => user.email == email && user.password == password);
         const user = await UserModel.findOne({ email });
 
+        /**
+         * bcrypt.compare(password, user.password): compara el valor 'password' ingresado por el usuario
+         * con el hash(encriptado) de la contrasenia que viene de la bd
+         */
         if (user && await bcrypt.compare(password, user.password)) {
             res.send(generateTokenResponse(user));
         }

@@ -186,6 +186,8 @@
     5. Agregar css
 <!-- Activar backend -->
 <!-- ir a la carpeta backend y ejecutar npm start -->
+<!-- cd backend -->
 
 <!-- Activar frontend -->
 <!-- ir a la carpeta frontend y ejecutar ng serve -o -->
+<!-- cd frontend -->
