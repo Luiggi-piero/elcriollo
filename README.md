@@ -191,3 +191,19 @@
 <!-- Activar frontend -->
 <!-- ir a la carpeta frontend y ejecutar ng serve -o -->
 <!-- cd frontend -->
+> [!NOTE]
+> NOTE
+
+> [!TIP]
+> TIP
+
+>[!WARNING]
+>WARNING
+
+>[!CAUTION]
+>CAUTION
+
+> [!IMPORTANT]
+> Al interior de backend/src/ agregar el archivo '.env' para las variables de entorno
+> * MONGO_URI=CODIGO_DE_CONEXION_CON_MONGO_DB <br>
+> * JWT_SECRET=PALABRA_SECRETA_JWT
